@@ -1,0 +1,30 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+mainClassName = 'hello.HelloWorld'
+
+// tag::repositories[]
+repositories {
+    mavenCentral()
+}
+// end::repositories[]
+
+// tag::jar[]
+jar {
+    archiveBaseName = 'gradle'
+    archiveVersion =  '0.1.0'
+}
+// end::jar[]
+
+// tag::dependencies[]
+sourceCompatibility = 17
+targetCompatibility = 17
+
+dependencies {
+    testImplementation "junit:junit:4.12"
+}
+// end::dependencies[]
+
+// tag::wrapper[]
+// end::wrapper[]
